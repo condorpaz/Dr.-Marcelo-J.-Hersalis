@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto - Dr. Marcelo J. Hersalis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a class="header-name" href="index.html">Dr. Marcelo J. Hersalis</a>
+  <button class="nav-toggle" aria-label="Menú" onclick="this.parentElement.querySelector('nav').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="trayectoria.html">Trayectoria</a>
+    <a href="publicaciones.html">Publicaciones</a>
+    <a href="estudio.html">Estudio</a>
+    <a href="contacto.html" class="active">Contacto</a>
+  </nav>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-eyebrow">Comunicación</p>
+    <h1>Contacto</h1>
+  </div>
+</section>
+
+<!-- CONTENIDO -->
+<div class="content">
+  <div class="contacto-grid">
+
+    <!-- Info -->
+    <div class="contacto-info">
+      <h3>Información de contacto</h3>
+
+      <div class="contacto-dato">
+        <label>Correo electrónico</label>
+        <a href="/cdn-cgi/l/email-protection#d4b7bbbaa0b5b7a0bb94bcb1a6a7b5b8bda7fab7bbb9fab5a6"><span class="__cf_email__" data-cfemail="ccafa3a2b8adafb8a38ca4a9bebfada0a5bfe2afa3a1e2adbe">[email&#160;protected]</span></a>
+      </div>
+
+      <div class="contacto-dato">
+        <label>Teléfono / WhatsApp</label>
+        <a href="https://wa.me/541112345678" target="_blank">+54 11 1234-5678 ↗</a>
+      </div>
+
+      <div class="contacto-dato">
+        <label>Estudio jurídico</label>
+        <span>Hersalis &amp; Asociados<br>Av. Corrientes 1234, Piso 8<br>Ciudad Autónoma de Buenos Aires</span>
+      </div>
+
+      <div class="contacto-dato">
+        <label>Horario de atención</label>
+        <span>Lunes a viernes, 9:00 a 18:00 hs.</span>
+      </div>
+    </div>
+
+    <!-- Formulario -->
+    <div class="contact-form">
+      <h3>Enviar un mensaje</h3>
+
+      <div class="form-group">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Su nombre">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="correo@ejemplo.com">
+      </div>
+
+      <div class="form-group">
+        <label for="asunto">Asunto</label>
+        <input type="text" id="asunto" name="asunto" placeholder="Motivo de la consulta">
+      </div>
+
+      <div class="form-group">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Escriba su consulta aquí..."></textarea>
+      </div>
+
+      <button class="btn-send" type="button" onclick="
+        var nombre = document.getElementById('nombre').value.trim();
+        var asunto = document.getElementById('asunto').value.trim();
+        var mensaje = document.getElementById('mensaje').value.trim();
+        var texto = 'Hola Dr. Hersalis, le escribo desde su sitio web.';
+        if (nombre) texto += '\n\nMi nombre es: ' + nombre + '.';
+        if (asunto) texto += '\nAsunto: ' + asunto + '.';
+        if (mensaje) texto += '\n\n' + mensaje;
+        window.open('https://wa.me/541112345678?text=' + encodeURIComponent(texto), '_blank');
+      ">Enviar por WhatsApp</button>
+    </div>
+
+  </d

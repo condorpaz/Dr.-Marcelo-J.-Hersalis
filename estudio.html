@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Estudio Jurídico - Dr. Marcelo J. Hersalis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ÁREAS */
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 64px;
+    }
+
+    .area-card {
+      background: var(--white);
+      padding: 32px 28px;
+    }
+
+    .area-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 600;
+      color: var(--gold);
+      opacity: 0.6;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .area-card h3 {
+      font-size: 20px;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .area-card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* EQUIPO */
+    .equipo-section {
+      margin-bottom: 64px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 32px;
+      font-weight: 400;
+    }
+
+    .equipo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .miembro {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .miembro-foto {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: #e8e4dc;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .miembro-foto img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .miembro-iniciales {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 600;
+      color: #b0a898;
+    }
+
+    .miembro-nombre {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .miembro-cargo {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .miembro-desc {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* CASOS */
+    .casos-section { margin-bottom: 0; }
+
+    .caso-item {
+      display: grid;
+      grid-template-columns: 1fr 80px;
+      gap: 24px;
+      align-items: start;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .caso-item:first-child { border-top: 1px solid var(--border); }
+
+    .caso-tag {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .caso-item h3 {
+      font-size: 20px;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .caso-item p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .caso-año {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      text-align: right;
+      padding-top: 4px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .areas-grid { grid-template-columns: 1fr 1fr; }
+      .equipo-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .areas-grid { grid-template-columns: 1fr; }
+      .equipo-grid { grid-template-columns: 1fr; }
+      .caso-item { grid-template-columns: 1fr; }
+      .caso-año { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a class="header-name" href="index.html">Dr. Marcelo J. Hersalis</a>
+  <button class="nav-toggle" aria-label="Menú" onclick="this.parentElement.querySelector('nav').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="trayectoria.html">Trayectoria</a>
+    <a href="publicaciones.html">Publicaciones</a>
+    <a href="estudio.html" class="active">Estudio</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-eyebrow">Buenos Aires, Argentina</p>
+    <h1>Dr. Marcelo J. Hersalis<br>Estudio Jurídico</h1>
+  </div>
+</section>
+
+<!-- CONTENIDO -->
+<div class="content">
+
+  <!-- ÁREAS DE PRÁCTICA -->
+  <p class="section-label">Áreas de práctica</p>
+  <div class="areas-grid">
+
+    <div class="area-card">
+      <div class="area-num">01</div>
+      <h3>Contratos Civiles y Comerciales</h3>
+      <p>Redacción, revisión y negociación de contratos complejos. Resolución de conflictos contractuales en sede judicial y arbitral.</p>
+    </div>
+
+    <div class="area-card">
+      <div class="area-num">02</div>
+      <h3>Derecho del Consumidor</h3>
+      <p>Asesoramiento a empresas y particulares en relaciones de consumo, defensa del consumidor y litigios ante organismos reguladores.</p>
+    </div>
+
+    <div class="area-card">
+      <div class="area-num">03</div>
+      <h3>Responsabilidad Civil</h3>
+      <p>Daños y perjuicios, responsabilidad profesional, responsabilidad del Estado y reclamaciones por incumplimiento contractual.</p>
+    </div>
+
+    <div class="area-card">
+      <div class="area-num">04</div>
+      <h3>Arbitraje y Mediación</h3>
+      <p>Representación en procesos arbitrales nacionales e internacionales. Mediación prejudicial obligatoria y voluntaria.</p>
+    </div>
+
+    <div class="area-card">
+      <div class="area-num">05</div>
+      <h3>Derecho Societario</h3>
+      <p>Constitución y restructuración de sociedades, contratos de socios, fusiones y adquisiciones, gobierno corporativo.</p>
+    </div>
+
+    <div class="area-card">
+      <div class="area-num">06</div>
+      <h3>Obligaciones y Garantías</h3>
+      <p>Estructuración de garantías reales y personales, fideicomisos de garantía, hipotecas y prendas comerciales.</p>
+    </div>
+
+  </div>
+
+  <!-- EQUIPO -->
+  <div class="equipo-section">
+    <p class="section-label">Equipo profesional</p>
+    <div class="equipo-grid">
+
+      <div class="miembro">
+        <div class="miembro-foto">
+          <img src="imagenes/Marcelo.jpg" alt="Dr. Marcelo J. Hersalis" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <span class="miembro-iniciales" style="display:none">MH</span>
+        </div>
+        <div class="miembro-nombre">Dr. Marcelo J. Hersalis</div>
+        <div class="miembro-cargo">Socio fundador &mdash; Director</div>
+        <p class="miembro-desc">Doctor en Ciencias Jurídicas. Profesor Titular de Contratos en la UBA. Más de 25 años de ejercicio profesional.</p>
+      </div>
+
+      <div class="miembro">
+        <div class="miembro-foto">
+          <span class="miembro-iniciales">AG</span>
+        </div>
+        <div class="miembro-nombre">Dra. Andrea Gómez</div>
+        <div class="miembro-cargo">Socia &mdash; Derecho Comercial</div>
+        <p class="miembro-desc">Especialista en derecho societario y fusiones. Magíster en Derecho Empresarial por la Universidad Austral.</p>
+      </div>
+
+      <div class="miembro">
+        <div class="miembro-foto">
+          <span class="miembro-iniciales">LR</span>
+        </div>
+        <div class="miembro-nombre">Dr. Luis Romero</div>
+        <div class="miembro-cargo">Asociado &mdash; Litigios</div>
+        <p class="miembro-desc">Especializado en resolución de conflictos, arbitraje comercial y responsabilidad civil contractual.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CASOS DESTACADOS -->
+  <div class="casos-section">
+    <p class="section-label">Experiencia destacada</p>
+    <div>
+
+      <div class="caso-item">
+        <div>
+          <div class="caso-tag">Arbitraje Internacional</div>
+          <h3>Disputa contractual en joint venture energético</h3>
+          <p>Representación de empresa argentina en arbitraje ante la CCI (París) por incumplimiento de contrato de licencia tecnológica. Acuerdo favorable por USD 4,2 millones.</p>
+        </div>
+        <div class="caso-año">2023</div>
+      </div>
+
+      <div class="caso-item">
+        <div>
+          <div class="caso-tag">Derecho del Consumidor</div>
+          <h3>Acción colectiva sector financiero</h3>
+          <p>Patrocinio en acción de clase contra entidad bancaria por cláusulas abusivas en contratos de crédito. Fallo favorable de la Cámara Civil y Comercial Federal.</p>
+        </div>
+        <div class="caso-año">2022</div>
+      </div>
+
+      <div class="caso-item">
+        <div>
+          <div class="caso-tag">Contratos Comerciales</div>
+          <h3>Resolución de contrato de distribución exclusiva</h3>
+          <p>Asesoramiento a empresa importadora ante rescisión intempestiva de contrato de distribución exclusiva. Obtención de indemnización integral por daño emergente y lucro cesante.</p>
+        </div>
+        <div class="caso-año">2021</div>
+      </div>
+
+      <div class="caso-item">
+        <div>
+          <div class="caso-tag">Responsabilidad Civil</div>
+          <h3>Responsabilidad por daños en contrato de franquicia</h3>
+          <p>Representación de franquiciante en juicio por daños y perjuicios derivados de incumplimiento del contrato de franquicia. Sentencia favorable en primera y segunda instancia.</p>
+        </div>
+        <div class="caso-año">2019</div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 <span>Dr. Marcelo J. Hersalis</span> — Todos los derechos reservados
+</footer>
+
+</body>
+</html>
