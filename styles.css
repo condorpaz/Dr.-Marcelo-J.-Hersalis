@@ -566,6 +566,20 @@ footer {
 
 footer span { color: var(--gold); }
 
+.footer-credits {
+  margin-top: 8px;
+  font-size: 11px;
+  opacity: 0.5;
+}
+
+.footer-credits a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-credits a:hover { color: var(--gold); }
+
 /* ===========================
    RESPONSIVE — MOBILE FIRST
    =========================== */
@@ -688,3 +702,4 @@ footer span { color: var(--gold); }
   .pub-year { display: none; }
   .hero-heading { font-size: 30px; }
 }
+
