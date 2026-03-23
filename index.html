@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inicio - Dr. Marcelo J. Hersalis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a class="header-name" href="index.html">Dr. Marcelo J. Hersalis</a>
+  <button class="nav-toggle" aria-label="Menú" onclick="this.parentElement.querySelector('nav').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <nav>
+    <a href="index.html" class="active">Inicio</a>
+    <a href="trayectoria.html">Trayectoria</a>
+    <a href="publicaciones.html">Publicaciones</a>
+    <a href="estudio.html">Estudio</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <p class="hero-eyebrow">Derecho Civil &amp; Comercial</p>
+      <h1 class="hero-heading">Especialista en<br>Derecho de<br>Contratos</h1>
+      <div class="hero-tags">
+        <div class="hero-tag">Profesor Universitario</div>
+        <div class="hero-tag">Autor Jurídico</div>
+        <div class="hero-tag">Conferencista</div>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="imagenes/Marcelo.jpg" alt="Dr. Marcelo J. Hersalis">
+    </div>
+  </div>
+</section>
+
+<!-- PERFIL -->
+<section class="perfil">
+  <div class="perfil-aside">
+    <p class="perfil-label">Perfil profesional</p>
+    <h2>Dr. Marcelo<br>J. Hersalis</h2>
+  </div>
+  <div class="perfil-text">
+    <p>
+      Abogado especializado en derecho civil y comercial, con una destacada trayectoria académica y profesional de más de dos décadas en el ámbito jurídico argentino.
+    </p>
+    <p>
+      Doctor en Ciencias Jurídicas, Profesor Titular en la Universidad de Buenos Aires y autor de obras de referencia en materia de contratos. Su práctica profesional combina el rigor académico con la experiencia forense en casos de alta complejidad.
+    </p>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- ACCESOS RÁPIDOS -->
+<section class="accesos">
+  <div class="accesos-inner">
+    <a class="acceso-card" href="trayectoria.html">
+      <span class="acceso-title">Trayectoria</span>
+      <span class="acceso-desc">Formación académica, docencia y ejercicio profesional</span>
+      <span class="acceso-arrow">→</span>
+    </a>
+    <a class="acceso-card" href="publicaciones.html">
+      <span class="acceso-title">Publicaciones</span>
+      <span class="acceso-desc">Libros y artículos de doctrina jurídica</span>
+      <span class="acceso-arrow">→</span>
+    </a>
+    <a class="acceso-card" href="estudio.html">
+      <span class="acceso-title">Estudio Jurídico</span>
+      <span class="acceso-desc">Áreas de práctica, equipo y experiencia destacada</span>
+      <span class="acceso-arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<!-- CTA WHATSAPP -->
+<section class="cta-wa">
+  <div class="cta-wa-inner">
+    <div class="cta-wa-text">
+      <p class="cta-wa-label">Consultas profesionales</p>
+      <h2>¿Necesita asesoramiento<br>jurídico?</h2>
+    </div>
+    <a class="cta-wa-btn" href="https://wa.me/541112345678?text=Hola%20Dr.%20Hersalis%2C%20quisiera%20realizar%20una%20consulta%20profesional." target="_blank">
+      Escribir por WhatsApp
+    </a>
+  </div>
+</section>
+
+<style>
+  /* ACCESOS */
+  .accesos {
+    background: var(--cream);
+    padding: 60px 40px;
+  }
+  .accesos-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .acceso-card {
+    background: var(--white);
+    padding: 32px 28px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: background 0.2s;
+  }
+  .acceso-card:hover { background: #f0ece4; }
+  .acceso-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    color: var(--gold);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+  }
+  .acceso-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .acceso-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.55;
+    flex: 1;
+  }
+  .acceso-arrow {
+    font-size: 18px;
+    color: var(--gold);
+    margin-top: 8px;
+    transition: transform 0.2s;
+  }
+  .acceso-card:hover .acceso-arrow { transform: translateX(4px); }
+
+  /* CTA WHATSAPP */
+  .cta-wa {
+    background: var(--navy);
+    padding: 60px 40px;
+  }
+  .cta-wa-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  .cta-wa-label {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    font-weight: 400;
+  }
+  .cta-wa-text h2 {
+    font-size: clamp(24px, 3vw, 36px);
+    color: var(--white);
+    line-height: 1.2;
+  }
+  .cta-wa-btn {
+    flex-shrink: 0;
+    background: var(--gold);
+    color: var(--navy);
+    text-decoration: none;
+    padding: 16px 36px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-radius: var(--radius);
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+  .cta-wa-btn:hover { background: var(--gold-lt); }
+
+  @media (max-width: 900px) {
+    .accesos { padding: 32px 20px; }
+    .accesos-inner { grid-template-columns: 1fr; }
+    .acceso-card {
+      padding: 20px;
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+    }
+    .acceso-title { font-size: 20px; flex: 1; }
+    .acceso-desc { display: none; }
+    .acceso-arrow { margin-top: 0; font-size: 20px; }
+
+    .cta-wa { padding: 36px 20px; }
+    .cta-wa-inner { flex-direction: column; align-items: flex-start; gap: 24px; }
+    .cta-wa-text h2 { font-size: 28px; }
+    .cta-wa-btn {
+      width: 100%;
+      text-align: center;
+      padding: 18px;
+      font-size: 14px;
+    }
+  }
+</style>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 <span>Dr. Marcelo J. Hersalis</span> — Todos los derechos reservados
+</footer>
+
+</body>
+</html>
